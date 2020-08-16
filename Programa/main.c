@@ -36,11 +36,11 @@ int main (){
 
 	printf ("\nIngrese el nombre del archivo que desea abrir y pulse INTRO:\n");
   	scanf (" %[^\n]", rutaFichero);
-    archivo = fopen(rutaFichero, "r"); 								   
+	archivo = fopen(rutaFichero, "r"); 								   
 	printf("\n");		
-	printf ("\nIngrese el nombre donde desea guardar los el contenido y pulse INTRO:\n");
+	printf ("\nIngrese el nombre donde desea guardar el contenido y pulse INTRO:\n");
   	scanf (" %[^\n]", rutaFichero);
-    output = fopen(rutaFichero, "w+");       										 	
+	output = fopen(rutaFichero, "w+");       										 	
 	printf("\n");	
 	 	 	 	 	 		 
 	if (archivo == NULL){		
