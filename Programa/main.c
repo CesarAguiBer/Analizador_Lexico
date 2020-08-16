@@ -44,9 +44,9 @@ int main (){
 	printf("\n");	
 	 	 	 	 	 		 
 	if (archivo == NULL){		
-    	printf("\nERROR. No se pudo abrir el archivo. \n\n");       
+    		printf("\nERROR. No se pudo abrir el archivo. \n\n");       
 	}	else{		
-        	while((currentCharacter = fgetc(archivo)) != EOF){	 
+        		while((currentCharacter = fgetc(archivo)) != EOF){	 
 				if (currentCharacter != ' ' && currentCharacter != '\n'){
 					if(isVar == true){
 						if(!word[0]){
@@ -57,9 +57,9 @@ int main (){
 						variables[sizeOfVariables][i] = currentCharacter;						
 						sizeOfVariables = sizeOfVariables + 1;						
 					}
-	    			word[i] = currentCharacter;
-            		i++;
-        		}        	
+	    				word[i] = currentCharacter;
+            				i++;
+        			}        	
 				if(currentCharacter >= '0' && currentCharacter <= '9' ){
 					if (state == 0 || state == 1){
 						state = 1;					
@@ -198,10 +198,10 @@ int main (){
 				}										
 				memset(word, 0, sizeof word);				
 				i = 0;
-	    	}	    
+	    		}	    
 			fputs(finalString, output);
-	    	printf("%s \n", finalString);
-        }        
+	    		printf("%s \n", finalString);
+        	}        
     
 	fclose(archivo);
 	system("pause");
@@ -223,8 +223,9 @@ int alreadyExist(char variables[100][20], char word[50], int sizeOfVariables){
 int isReservedWord(word, finalString, i){ 
 	int x = 0;
 	int igualdad = 1;
-	char reservedWords[10][10] =
+	char reservedWords[11][10] =
 		{ "programa",
+		"real",
 	  	"entero",
 	  	"cadena",
 	  	"imprimir",
@@ -236,7 +237,7 @@ int isReservedWord(word, finalString, i){
 		"="
 		};
 	
-	for(x = 0; x < 10; x++){				
+	for(x = 0; x < 11; x++){				
 		igualdad = strcmp(word, reservedWords[x]);				
 			if (igualdad == 0){							
 				if(x == 9){
@@ -245,7 +246,7 @@ int isReservedWord(word, finalString, i){
 					flag = true; 				
 					i = 0;	
 				}	else{
-						if(x == 1 || x == 2){							
+						if(x == 1 || x == 2 || x == 3){							
 							isVar = true;							
 						}	else{
 								isVar = false;
