@@ -44,9 +44,9 @@ int main (){
 	printf("\n");	
 	 	 	 	 	 		 
 	if (archivo == NULL){		
-    	printf("\nERROR. No se pudo abrir el archivo. \n\n");       
+    		printf("\nERROR. No se pudo abrir el archivo. \n\n");       
 	}	else{		
-        	while((currentCharacter = fgetc(archivo)) != EOF){	 
+        		while((currentCharacter = fgetc(archivo)) != EOF){	 
 				if (currentCharacter != ' ' && currentCharacter != '\n'){
 					if(isVar == true){
 						if(!word[0]){
@@ -57,9 +57,9 @@ int main (){
 						variables[sizeOfVariables][i] = currentCharacter;						
 						sizeOfVariables = sizeOfVariables + 1;						
 					}
-	    			word[i] = currentCharacter;
-            		i++;
-        		}        	
+	    				word[i] = currentCharacter;
+            				i++;
+        			}        	
 				if(currentCharacter >= '0' && currentCharacter <= '9' ){
 					if (state == 0 || state == 1){
 						state = 1;					
@@ -198,10 +198,10 @@ int main (){
 				}										
 				memset(word, 0, sizeof word);				
 				i = 0;
-	    	}	    
+	    		}	    
 			fputs(finalString, output);
-	    	printf("%s \n", finalString);
-        }        
+	    		printf("%s \n", finalString);
+        	}        
     
 	fclose(archivo);
 	system("pause");
