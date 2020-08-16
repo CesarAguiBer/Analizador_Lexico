@@ -223,8 +223,9 @@ int alreadyExist(char variables[100][20], char word[50], int sizeOfVariables){
 int isReservedWord(word, finalString, i){ 
 	int x = 0;
 	int igualdad = 1;
-	char reservedWords[10][10] =
+	char reservedWords[11][10] =
 		{ "programa",
+		"real",
 	  	"entero",
 	  	"cadena",
 	  	"imprimir",
@@ -236,7 +237,7 @@ int isReservedWord(word, finalString, i){
 		"="
 		};
 	
-	for(x = 0; x < 10; x++){				
+	for(x = 0; x < 11; x++){				
 		igualdad = strcmp(word, reservedWords[x]);				
 			if (igualdad == 0){							
 				if(x == 9){
@@ -245,7 +246,7 @@ int isReservedWord(word, finalString, i){
 					flag = true; 				
 					i = 0;	
 				}	else{
-						if(x == 1 || x == 2){							
+						if(x == 1 || x == 2 || x == 3){							
 							isVar = true;							
 						}	else{
 								isVar = false;
