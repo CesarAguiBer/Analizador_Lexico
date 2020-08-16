@@ -11,6 +11,9 @@ HADDIEL NAHUM CRUZ RODRÍGUEZ – 20161000374
 JONATHAN JOSUE AMADOR LÓPEZ – 20171004637 
 KATHERINE ARELY ESPINO SANTO – 20171001091
 
+Numero de teléfono para soporte técnico = 9903-1706
+
+
 
 Para un buen funcionamiento del programa, los archivos de entrada deben de estar en la misma carpeta del archivo 'main.exe'
 
